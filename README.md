@@ -61,7 +61,9 @@ Whooaa! 🎉 You now have the faucet ETH in your address.
 Let's deploy your very own Token smart contract on the Arbitrum testnet.
 
 ### What is an ERC-20 Token?
-An ERC-20 token is a type of digital asset on the Ethereum blockchain that adheres to the ERC-20 standard, ensuring consistency and compatibility across the ecosystem. This standard defines a set of rules and functions that all tokens must follow, allowing them to seamlessly interact with decentralized applications (dApps), wallets, and exchanges on the Ethereum network.
+An ERC-20 token is a type of digital asset on the Ethereum blockchain that adheres to the ERC-20 standard, ensuring consistency and compatibility across the ecosystem.
+
+This standard defines a set of rules and functions that all tokens must follow, allowing them to seamlessly interact with decentralized applications (dApps), wallets, and exchanges on the Ethereum network.
 
 ### Step 1: Clone the Repository 
 First, let's clone the repository that contains our Token smart contract.
