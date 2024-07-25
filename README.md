@@ -57,3 +57,84 @@ For more details on how to setup a MetaMask wallet, visit [this link](https://co
 Whooaa! 🎉 You now have the faucet ETH in your address.
 
 ## Deploying a Token Smart Contract 🖼️
+
+Let's deploy your very own Token smart contract on the Arbitrum testnet.
+
+### What is an ERC-20 Token?
+An ERC-20 token is a type of digital asset on the Ethereum blockchain that adheres to the ERC-20 standard, ensuring consistency and compatibility across the ecosystem. This standard defines a set of rules and functions that all tokens must follow, allowing them to seamlessly interact with decentralized applications (dApps), wallets, and exchanges on the Ethereum network.
+
+### Step 1: Clone the Repository 
+First, let's clone the repository that contains our Token smart contract.
+
+```bash
+git clone https://github.com/Bhumi18/erc20-solidity.git
+cd erc20-solidity
+```
+### Step 2: Install Dependencies
+Navigate to the cloned repository and install the necessary dependencies. 
+```bash
+npm install
+```
+
+### Step 3: Set the Hardhat Config Variables
+You'll need to set three environment variables: ARBITRUM_PRIVATE_KEY, ARBITRUM_RPC_URL, and ARBITRUM_API_KEY. Follow the steps below to obtain the necessary values and set them up:
+
+#### 1. ARBITRUM_PRIVATE_KEY
+To export your private key from MetaMask:
+
+- Open MetaMask.
+- Go to Account Details.
+- Select Export Private Key.
+- Important: NEVER put real Ether into testing accounts.
+
+#### 2. ARBITRUM_RPC_URL
+To get the RPC URL:
+
+- Sign up for [Alchemy](https://dashboard.alchemy.com/apps/tpvyvhyqno4s4bla/networks).
+- Create a new app in Alchemy.
+- Go to the Networks section of the app.
+- Select Arbitrum Sepolia.
+- Copy the link that starts with https://....
+
+#### 3. ARBITRUM_API_KEY
+To get your API key:
+
+- Log in to [Arbiscan](https://arbiscan.io/).
+- Go to My Account and get your API key.
+
+Run the following commands and add the values when prompted:
+```bash
+npx hardhat vars set ARBITRUM_PRIVATE_KEY
+```
+```bash
+npx hardhat vars set ARBITRUM_RPC_URL
+```
+```bash
+npx hardhat vars set ARBITRUM_API_KEY
+```
+
+By following these steps, you'll have your environment variables set up and ready for use with Arbitrum.
+
+### Step 4: Compile the Smart Contract
+Next, let's compile our smart contract to ensure everything is set up correctly. 
+
+```bash
+npx hardhat compile
+```
+
+### Step 5: Deploy the Contract
+With our contract compiled, we can now deploy it to the Arbitrum testnet. Make sure you have the Arbitrum Sepolia faucet in your account, and that you have added the private key correctly.
+
+```bash
+npx hardhat ignition deploy ignition/modules/Token.ts --network arbitrumSepolia
+```
+Boom!🚀 You have just deployed your Token contract. Use the contract address to see your deployed contract on the [explorer](https://sepolia.arbiscan.io/).
+
+### Step 7: Verify the Contract
+After deployment, we can verify our contract on Arbitrum Sepolia Scan. 
+
+```bash
+npx hardhat verify YOUR_CONTRACT_ADDRESS --network arbitrumSepolia
+```
+You can see my deployed contract on this [link](https://sepolia.arbiscan.io/address/0x3aE5d117E1f1A337364df89890d9a2d4D405f7AA).
+
